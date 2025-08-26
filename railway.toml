@@ -1,0 +1,10 @@
+toml[build]
+builder = "nixpacks"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+
+[deploy.envVars]
+PORT = "8080"
