@@ -54,6 +54,7 @@ def download_video():
             'audioformat': 'mp3',
             'embed_subs': False,
             'writesubtitles': False
+            'cookiefile': 'cookies.txt' 
         }
         
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
