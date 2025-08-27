@@ -79,9 +79,12 @@ def download_video():
             
             filename = f'/tmp/{video_id}.mp4'
 
+            try:
             youtube_url = request.json.get('url', '').strip()
-print("Received URL:", youtube_url)
-            
+            print("Received URL:", youtube_url)
+            except Exception as e:
+            print("Erreur:", e)
+
             if not os.path.exists(filename):
                 return jsonify({'error': 'Échec du téléchargement'}), 500
             
