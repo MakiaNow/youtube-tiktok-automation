@@ -6,6 +6,7 @@ from datetime import datetime
 import tempfile
 import shutil
 
+
 app = Flask(__name__)
 
 # Configuration pour Railway
@@ -54,6 +55,7 @@ def download_video():
             'audioformat': 'mp3',
             'embed_subs': False,
             'writesubtitles': False,
+            'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36',
             'cookiefile': 'cookies.txt' 
         }
         
