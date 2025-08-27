@@ -53,7 +53,7 @@ def download_video():
             'extractaudio': False,
             'audioformat': 'mp3',
             'embed_subs': False,
-            'writesubtitles': False
+            'writesubtitles': False,
             'cookiefile': 'cookies.txt' 
         }
         
