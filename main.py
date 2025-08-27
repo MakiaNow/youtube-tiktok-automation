@@ -78,6 +78,9 @@ def download_video():
             ydl.download([youtube_url])
             
             filename = f'/tmp/{video_id}.mp4'
+
+            youtube_url = request.json.get('url', '').strip()
+print("Received URL:", youtube_url)
             
             if not os.path.exists(filename):
                 return jsonify({'error': 'Échec du téléchargement'}), 500
